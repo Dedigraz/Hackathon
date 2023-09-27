@@ -1,13 +1,13 @@
-import {  useState, useEffect, useMemo } from 'react';
+import {  useState, useEffect } from 'react';
 import './App.css'
 
 // convert the above to a functional component
 export default function App() {
-    const spinningWheel = <p><em><i className='fa fa-spinner fa-spin'></i> Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationreact">https://aka.ms/jspsintegrationreact</a> for more details.</em></p>;
+    const loadingText = <p><em><i className='fa fa-spinner fa-spin'></i> Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationreact">https://aka.ms/jspsintegrationreact</a> for more details.</em></p>;
     
     const [forecasts, setForecasts] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [contents, setContents] = useState(spinningWheel);
+    const [contents, setContents] = useState("");
     
     useEffect(() => {
         async function populateWeatherData() {
@@ -53,7 +53,7 @@ export default function App() {
                 <h1 id="tabelLabel" className='' ><i className='fa-weather'></i> Weather forecast</h1>
                 <p>This component demonstrates fetching data from the server.</p>
 
-                {loading?spinningWheel:contents}
+                {loading?loadingText:contents}
         </div>
         
     );
