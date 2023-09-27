@@ -1,0 +1,16 @@
+{
+    "fontAwesomeAutocomplete.version": "6",
+    "fontAwesomeAutocomplete.patterns": [
+        // "**/*.html",
+        "**/*.jsx"
+    ],
+    "fontAwesomeAutocomplete.triggerWord": "fa-",
+        // "fontAwesomeAutocomplete.disableTriggerWordAutoClearPatterns": ["**/*.html", "**/*.jsx"],
+    "fontAwesomeAutocomplete.preview.backgroundColor": "#ffffff",
+    "fontAwesomeAutocomplete.preview.foregroundColor": "#000000",
+    // "fontAwesomeAutocomplete.insertionTemplate": {
+    //     "**/*.html": "{style} {prefix}{name}",
+    //     "**/*.jsx": "{style} {prefix}{name}"
+    // },
+    "fontAwesomeAutocomplete.enableElevatedSortPriority": true
+}

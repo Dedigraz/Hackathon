@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "mgmcdermott.vscode-language-babel",
+        "ms-dotnettools.csdevkit",
+        "ms-dotnettools.csharp",
+        "dsznajder.es7-react-js-snippets",
+        "bradlc.vscode-tailwindcss",
+        "Janne252.fontawesome-autocomplete"
+    ]
+}
