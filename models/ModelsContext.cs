@@ -7,14 +7,24 @@ namespace models;
 
 public class ModelsContext : DbContext
 {
+    
     public string DbPath { get; private set; }
     public ModelsContext()
     {
-        var folder = Environment.SpecialFolder.LocalApplicationData;
-        var path = Environment.GetFolderPath(folder);
-        DbPath = System.IO.Path.Join(path, "hackathon.db");
+        string relativePath = @"Data\db.sqlite";
+        var parentdir = Path.GetDirectoryName(Environment.CurrentDirectory);
+        DbPath = Path.Combine(parentdir!, relativePath);
     }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder options)
-        => options.UseSqlite($"Data Source={DbPath}");
+    public ModelsContext(DbContextOptions<ModelsContext> options): base(options){
+    }
+
+    public DbSet<WeatherForecast> WeatherForecasts { get; set; }
+
+
+    protected override void OnConfiguring(DbContextOptionsBuilder options){
+            DbPath = Path.Combine(Environment.CurrentDirectory, "db.sqlite");
+
+            options.UseSqlite($"Data Source={DbPath}");
+        }
 }

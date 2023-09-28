@@ -1,6 +1,8 @@
 # Build instructions
 
-## For migrations run
+## Migration instructions
+
+After downloading .Net run this to set up the database
 
 ``` bash
 dotnet tool install --global dotnet-ef
