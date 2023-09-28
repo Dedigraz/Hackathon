@@ -23,7 +23,7 @@ public class ModelsContext : DbContext
 
 
     protected override void OnConfiguring(DbContextOptionsBuilder options){
-            DbPath = Path.Combine(Environment.CurrentDirectory, "db.sqlite");
+            DbPath = Path.Combine(Environment.CurrentDirectory, @"Data\db.sqlite");
 
             options.UseSqlite($"Data Source={DbPath}");
         }
